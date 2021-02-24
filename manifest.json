@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Hover & Play",
+    "author": "Pavaux1963",
+    "version": "1.0.0",
+    "description": "Play YouTube videos by hovering over the thumbnail.",
+    "icons": {
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://www.youtube.com/*"
+        ],
+        "js": [
+            "script.js"
+        ]
+    }],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "tabs",
+        "https://www.youtube.com/*"
+    ]
+}
